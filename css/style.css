@@ -1,0 +1,199 @@
+body {
+  background-color: #100e1d; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; }
+
+h1, h2, h3, h4, p, div {
+  color: #bbbbc4; }
+
+.container {
+  display: grid;
+  grid-template-areas: "aside main" "aside section" "aside section" "footer footer";
+  grid-template-columns: 25% 75%;
+  grid-row-gap: 10px; }
+
+main {
+  grid-area: main;
+  background-color: #100e1d;
+  height: 55vh; }
+  main h1 {
+    padding-top: 25px;
+    text-align: center; }
+
+.container__semana {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px; }
+
+.semana__dia {
+  height: 26vh;
+  background-color: #1e213a;
+  padding: 15px;
+  margin: 25px;
+  width: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: #bbbbc4 1px solid;
+  font-size: 14px; }
+
+aside {
+  height: 105vh;
+  grid-area: aside;
+  background-color: #1e213a; }
+  aside input {
+    margin-left: 15px;
+    padding: 5px;
+    background-color: #6e707a;
+    color: #bbbbc4; }
+  aside button {
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 5px;
+    background-color: #6e707a;
+    color: #bbbbc4; }
+  aside h1 {
+    margin-top: 30px;
+    text-align: center; }
+  aside p {
+    text-align: center;
+    margin-top: 5px; }
+  aside select {
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-top: 15px;
+    color: #bbbbc4;
+    background-color: #6e707a; }
+  aside h5 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 24px; }
+
+.contenedor__dia {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+  text-align: center; }
+  .contenedor__dia img {
+    width: 100px;
+    height: 100px; }
+
+.dia__temps {
+  display: flex;
+  justify-content: space-around; }
+
+section {
+  height: 45vh;
+  grid-area: section;
+  background-color: #100e1d; }
+  section h3 {
+    margin-top: 5px;
+    text-align: center; }
+
+.contenedor__estadisticas {
+  display: flex;
+  justify-content: center; }
+  .contenedor__estadisticas div {
+    text-align: center;
+    height: 15vh;
+    width: 10vw;
+    background-color: #1e213a;
+    margin-top: 15px;
+    margin-right: 20px;
+    border: #bbbbc4 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+
+footer {
+  grid-area: footer;
+  background-color: #100e1d; }
+  footer h4 {
+    margin-top: 15px;
+    text-align: center; }
+
+.myChart {
+  width: 400px;
+  height: 40vh; }
+
+.dark__container {
+  display: flex;
+  justify-content: end; }
+  .dark__container button {
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 5px;
+    background-color: #6e707a;
+    color: #bbbbc4; }
+
+.dark__theme {
+  background-color: #5f91ea; }
+  .dark__theme h1 {
+    color: #bbbbc4; }
+  .dark__theme input {
+    background-color: #1e213a; }
+  .dark__theme h3 {
+    color: #bbbbc4; }
+  .dark__theme div {
+    color: #100e1d; }
+  .dark__theme button {
+    color: #bbbbc4;
+    background-color: #1e213a; }
+  .dark__theme select {
+    color: #bbbbc4;
+    background-color: #1e213a; }
+  .dark__theme h5 {
+    color: #100e1d; }
+  .dark__theme .dia__temps h3 {
+    color: #100e1d; }
+  .dark__theme .contenedor__dia h3 {
+    color: #100e1d; }
+  .dark__theme .section {
+    color: #100e1d; }
+  .dark__theme .DiaYHoraActual {
+    color: #100e1d; }
+  .dark__theme footer {
+    background-color: #5f91ea; }
+    .dark__theme footer h4 {
+      color: #1e213a; }
+
+@media screen and (max-width: 576px) {
+  .container {
+    display: grid;
+    grid-template-areas: "aside aside" "section section" "main main" "footer footer";
+    grid-template-columns: 25% 75%; }
+  aside {
+    height: 75vh; }
+    aside form {
+      display: flex;
+      justify-content: center; }
+      aside form input {
+        margin-top: 15px; }
+  .contenedor__estadisticas div {
+    width: 30vw; }
+    .contenedor__estadisticas div p {
+      font-size: 14px; }
+  .semana__dia {
+    width: 23vw;
+    font-size: 12px; }
+    .semana__dia p {
+      font-size: 12px; }
+  main {
+    height: 75vh; }
+  .dark__container {
+    display: none; }
+  section {
+    height: 40vh; }
+  #DiaYHoraActual {
+    display: none; } }

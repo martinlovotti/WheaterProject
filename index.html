@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver el Clima</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script src="js/clima.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="icons/113.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js"></script>
+</head>
+
+<body>
+    <div id="container"class="container">
+        <main id="main">
+            <div class="dark__container">
+                <button id="toggleTheme">Light</button>
+            </div>
+            <h1 class="DiaYHoraActual "id="DiaYHoraActual"></h1>
+            <div class="container__semana">
+                <div class="semana__dia">
+                    <h4 id="nextDayTime" class="dia__1">Day</h4>
+                    <img id="nextDayIcon"src="" alt="">
+                    <p id="nextDayInfo">s</p>
+                    <p id="nextDayTemp" class="dia">s</p>
+                    <p id="nextDayMinTemp" class="dia">s</p>
+                </div>
+                <div class="semana__dia">
+                    <h4 id="nextDay2Time"class="dia__2">Day</h4>
+                    <img id="nextDay2Icon"src="" alt="">
+                    <p id="nextDay2Info">s</p>
+                    <p id="nextDay2Temp" class="dia">s</p>
+                    <p id="nextDay2MinTemp" class="dia">s</p>
+                </div>
+                <div class="semana__dia">
+                    <h4 id="nextDay3Time"class="dia__2">Day</h4>
+                    <img id="nextDay3Icon"src="" alt="">
+                    <p id="nextDay3Info">s</p>
+                    <p id="nextDay3Temp" class="dia">s</p>
+                    <p id="nextDay3MinTemp" class="dia">s</p>
+                </div>
+            </div>
+        </main>
+
+        <aside id="aside">
+            <form action="" id="search__submit">
+                <input type="text" value="" placeholder="Localiza tu zona" id="search__input">
+                <button type="submit">Buscar:</button><br>
+            </form>
+            <h5 id="city"></h5>
+            <h5>Estadisticas:</h5>
+            <div class="contenedor__dia">
+                <div>
+                    <h3 id="degreeNumber">16</h3>
+                    <img id="weatherIcon" src="" alt="">
+                    <h3 id="informationDay">Soleado</h3>
+                </div>
+            </div>
+            <canvas id="myChart" class="myChart">
+
+            </canvas>
+            <div class="dia__temps">
+                <h3 id="minTemp">Min:</h3>
+                <h3 id="maxTemp">Max:</h3>
+            </div>
+        </aside>
+
+        <section id="section">
+            <h3 class="section">Estadisticas del dia de Hoy</h3>
+            <div class="contenedor__estadisticas">
+                <div class="section">
+                    <p>Viento</p><br>
+                    <p class="est" id="wind"></p>
+                </div>
+                    
+                <div>
+                    <p>Humedad</p><br>
+                    <p class="est" id="hum"></p>
+                </div>
+
+            </div>
+
+            <div class="contenedor__estadisticas">
+                <div>
+                    <p>Visibilidad</p><br>
+                    <p class="est" id="visibility">Visibilidad</p>
+                </div>
+
+                <div>
+                    <p>Precipitaciones</p><br>
+                    <p class="est" id="prep"></p>
+                </div>
+            </div>
+        </section>
+
+        
+        <footer>
+            <h4>Hecho con cariño por Martin ❤✨</h3>
+        </footer>
+    </div>
+    
+</body>
+</html>
